@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CampusConnect | Smart Campus Support</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="nav">
+    <div class="logo">Campus<span>Connect</span></div>
+    <div class="links">
+      <a href="#home">Home</a><a href="#report">Report Issue</a><a href="#track">Track</a><a href="#about">About</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-text">
+    <p class="badge">SMART CAMPUS SUPPORT PORTAL</p>
+    <h1>Make your campus<br><span>better, together.</span></h1>
+    <p class="lead">Report campus issues, track complaints, and help create a safer and better student experience.</p>
+    <div class="actions"><a class="btn primary" href="#report">Report an Issue</a><a class="btn secondary" href="#track">Track Complaint</a></div>
+  </div>
+  <div class="hero-card">
+    <div class="card-icon">✓</div><h3>One place for every issue</h3>
+    <p>Hostel • Lab • Classroom • Transport • Infrastructure</p>
+    <div class="mini-stat"><b id="heroCount">0</b><span>issues reported</span></div>
+  </div>
+</section>
+
+<section class="stats">
+  <div><b id="total">0</b><span>Total Reports</span></div>
+  <div><b id="pending">0</b><span>Pending</span></div>
+  <div><b id="resolved">0</b><span>Resolved</span></div>
+  <div><b>24/7</b><span>Accessible</span></div>
+</section>
+
+<section id="report" class="section">
+  <div class="section-head"><p class="eyebrow">01 / REPORT</p><h2>Report a Campus Issue</h2><p>Tell us what needs attention. Your report will receive a unique complaint ID.</p></div>
+  <form id="reportForm" class="form-card">
+    <div class="grid">
+      <label>Student Name<input id="name" required placeholder="Enter your name"></label>
+      <label>Category<select id="category" required><option value="">Select category</option><option>Hostel</option><option>Classroom</option><option>Laboratory</option><option>Transport</option><option>Infrastructure</option><option>Other</option></select></label>
+    </div>
+    <label>Issue Title<input id="title" required placeholder="e.g. Lab computer not working"></label>
+    <label>Description<textarea id="description" required rows="4" placeholder="Describe the issue briefly..."></textarea></label>
+    <button class="btn primary" type="submit">Submit Complaint →</button>
+  </form>
+  <div id="success" class="success hidden"></div>
+</section>
+
+<section id="track" class="section alt">
+  <div class="section-head"><p class="eyebrow">02 / TRACK</p><h2>Track Your Complaint</h2><p>Enter your complaint ID to check the latest status.</p></div>
+  <div class="track-box">
+    <input id="trackId" placeholder="Example: CC-2026-1001"><button class="btn primary" onclick="trackComplaint()">Check Status</button>
+  </div>
+  <div id="result"></div>
+  <div class="recent"><h3>Recent Reports</h3><div id="recentList"></div></div>
+</section>
+
+<section id="about" class="section">
+  <div class="section-head"><p class="eyebrow">03 / ABOUT</p><h2>Why CampusConnect?</h2></div>
+  <div class="features">
+    <div><span>01</span><h3>Simple Reporting</h3><p>Students can report issues through a clean and easy interface.</p></div>
+    <div><span>02</span><h3>Track Progress</h3><p>Every complaint gets a unique ID for quick status checking.</p></div>
+    <div><span>03</span><h3>Better Campus</h3><p>Centralized reporting helps institutions respond more efficiently.</p></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="logo">Campus<span>Connect</span></div><p>Smart Campus Complaint & Support Portal • Academic Project</p></footer>
+<script src="script.js"></script>
+</body>
+</html>
